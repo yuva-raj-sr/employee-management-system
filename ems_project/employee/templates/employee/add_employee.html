@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Add Employee</title>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Add Employee</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<input type="text" name="name" placeholder="Employee Name">
+
+<input type="email" name="email" placeholder="Email">
+
+<input type="text" name="department" placeholder="Department">
+
+<input type="number" name="salary" placeholder="Salary">
+
+<input type="date" name="joining_date">
+
+<button type="submit">Add Employee</button>
+
+</form>
+
+<a href="/" class="back-btn">Back to Employee List</a>
+
+</div>
+
+</body>
+
+</html>
